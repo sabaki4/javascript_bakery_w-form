@@ -10,7 +10,6 @@ const Cake = ({name, ingredients, price, rating}) => {
                 return <li>{ingredient}</li>
             })}
         </ul>
-        <h4>Price: {price}</h4>
         <h4>Rating: {rating}</h4>
         </>
     
