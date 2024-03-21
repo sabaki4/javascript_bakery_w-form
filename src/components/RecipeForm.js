@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const RecipeForm = ({addRecipe }) => {
   const [cakeName, setCakeName] = useState("");
-  const [ingredients, setIngredients] = useState("");
+  const [ingredients, setIngredients] = useState([]);
   const [rating, setRating] = useState("");
   const [error, setError] = useState("");
 
@@ -12,7 +12,7 @@ const RecipeForm = ({addRecipe }) => {
     if (validation()) {
       const newRecipe = {
         cakeName,
-        ingredients,
+        ingredients: ingredients.split(","),
         rating,
       };
       addRecipe(newRecipe);
